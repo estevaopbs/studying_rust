@@ -154,7 +154,7 @@ fn parse_datetime_filter(datetime_filter: String, default_tz: i32) -> Expr {
         {
             let has_sign = true;
             let re = Regex::new(r"([!=+><]{1,2}) *([\d \-:\.+]+)").unwrap();
-            let captures = re.captures(&datetime_filter).unwrap();
+            let captures = re.captures(&s).unwrap();
             let sign = captures.get(1).unwrap().as_str();
             let datetime_str = captures.get(2).unwrap().as_str();
         }

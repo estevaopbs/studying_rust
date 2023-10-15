@@ -11,8 +11,6 @@ use polars::prelude::DataType;
 #[global_allocator]
 static GLOBAL: MiMalloc = MiMalloc;
 
-// Read the file '~/.bills/tz' and converts the content to i32. If the file does not ex
-
 fn main() {
     let user_input: UserInput = UserInput::parse();
     print!("{:#?}", user_input);
